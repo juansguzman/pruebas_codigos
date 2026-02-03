@@ -172,23 +172,31 @@
     <div class="pulse-ring"></div>
 </div>
 <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
 <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
 <df-messenger
   location="us-central1"
   project-id="meduca-ester-21929"
-  agent-id="9a874018-f248-405d-a9cd-5dd92a13ca5c"
+  agent-id="9ad0628b-b3a4-47d4-990e-7fda202af081"
   language-code="es"
-  intent="captar_intencion"
-  wait-open="true"
-  max-query-length="-1"
-  
-  >
-  <df-messenger-chat-bubble 
-  chat-title ="Prueba de agente" 
-  expanded=true
-    >
+  max-query-length="-1">
+  <df-messenger-chat-bubble
+    chat-title="Ejemplos">
   </df-messenger-chat-bubble>
 </df-messenger>
+<style>
+  df-messenger {
+    z-index: 999;
+    position: fixed;
+    --df-messenger-font-color: #000;
+    --df-messenger-font-family: Google Sans;
+    --df-messenger-chat-background: #f3f6fc;
+    --df-messenger-message-user-background: #d3e3fd;
+    --df-messenger-message-bot-background: #fff;
+    bottom: 16px;
+    right: 16px;
+  }
+</style>
 <script>
   // Borra la sesión de Dialogflow al recargar la página
   window.addEventListener('beforeunload', function() {
